@@ -31,7 +31,7 @@ var Restaurant = function(restaurants) {
   
   function loaddata(data){
     //Response Fourquare fields
-    var data = data.response.venues[0];
+    data = data.response.venues[0];
     self.category = data.categories[0].shortName;
     self.address = data.location.formattedAddress.join(', ');
     self.phone = data.contact.formattedPhone;
