@@ -21,12 +21,7 @@ var Restaurant = function(restaurants) {
   self.title = restaurants.title;
   self.searchTitle = restaurants.title.toLowerCase();
   //url foursquare search
-  var url = 'https://api.foursquare.com/v2/venues/search?'
-    + '&ll='+ restaurants.lat + ',' + restaurants.lng 
-    + '&v=20180120' 
-    + '&intent=global&query=' + restaurants.title
-    + '&client_id=' + 'ID5IELTFHJDDCGKFODHHLOMTZ1RRYOOEPPFLL31FTGXDXL05' 
-    + '&client_secret=' + 'NHXSJPKCNXCRRM2YZVSW22ZNO0UIV054HKPHTL3JJRFBFEHF';
+  var url = 'https://api.foursquare.com/v2/venues/search?'+ '&ll=' + restaurants.lat + ',' + restaurants.lng+ '&v=20180120'+ '&intent=global&query=' + restaurants.title    + '&client_id=' + 'ID5IELTFHJDDCGKFODHHLOMTZ1RRYOOEPPFLL31FTGXDXL05'+ '&client_secret=' + 'NHXSJPKCNXCRRM2YZVSW22ZNO0UIV054HKPHTL3JJRFBFEHF';
   //Foursquare request Venue Search
   fetch(url)
     .then(response => response.json())
@@ -48,11 +43,7 @@ var Restaurant = function(restaurants) {
 
   function loadphoto(){
     //url foursquare photo
-    var urlphoto = 'https://api.foursquare.com/v2/venues/' + self.id + '/photos?'
-    + '&limit=1'
-    + '&v=20180120'
-    + '&client_id=' + 'ID5IELTFHJDDCGKFODHHLOMTZ1RRYOOEPPFLL31FTGXDXL05'
-    + '&client_secret=' + 'NHXSJPKCNXCRRM2YZVSW22ZNO0UIV054HKPHTL3JJRFBFEHF';
+    var urlphoto = 'https://api.foursquare.com/v2/venues/' + self.id + '/photos?'+ '&limit=1'+ '&v=20180120'+ '&client_id=' + 'ID5IELTFHJDDCGKFODHHLOMTZ1RRYOOEPPFLL31FTGXDXL05'+ '&client_secret=' + 'NHXSJPKCNXCRRM2YZVSW22ZNO0UIV054HKPHTL3JJRFBFEHF';
     //Foursquare request photos
     fetch(urlphoto)
       .then(response => response.json())
