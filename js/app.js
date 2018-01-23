@@ -110,7 +110,7 @@ function requestError(part) {
 // handle error message for google maps api
 function googleMapsError() {
   alert('There was an error with Google Maps.');
-};
+}
 
 //knockout view
 var AppViewModel = function() {
