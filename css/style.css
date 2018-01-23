@@ -8,31 +8,28 @@
 .container {
  height: 100%;
  position: relative;
-}
+ }
 
 .menu {
   background: #fff;
-  border: 1px solid #999;
-  border-radius: 3px;
   height: 50%;
   padding: 10px 10px 30px 10px;
   text-align: left;
-  width: 340px;
+  width: 23%;
 }
 
 .locations {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  
+  width:340px;
 }
 
 .location-item {
   cursor: pointer;
   background-color: #ffa3d1;
-  
-  padding: 2vh 2px;
+  padding: 10px;
   text-align: center;
   margin: 2vh 0;
 }
@@ -47,13 +44,10 @@
 
 @media (max-width: 700px){
 
-.menu{
-  display: flex;
+  #mapRJ{
+  position:unset;
 }
 
-.filter {
-  position: fixed;
-}
 }
 
 

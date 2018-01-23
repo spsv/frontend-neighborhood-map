@@ -27,7 +27,7 @@ var Restaurant = function(restaurants) {
     .then(response => response.json())
     .then(loaddata) //load venue search
     .then(loadphoto) //and then load venue photo
-    .catch(err => requestError(err, 'restaurant')); 
+    .catch(err => requestError('restaurant')); 
   
   function loaddata(data){
     //Response Fourquare fields
@@ -48,7 +48,7 @@ var Restaurant = function(restaurants) {
     fetch(urlphoto)
       .then(response => response.json())
       .then(photos)
-      .catch(err => requestError(err, 'photo'));
+      .catch(err => requestError('photo'));
     function photos(dataphoto){
       //get suffix and prefix of foursquare photos
       self.prefix = dataphoto.response.photos.items[0].prefix;
@@ -102,10 +102,15 @@ var Restaurant = function(restaurants) {
   };
 
 };
-// error function
-function requestError(e, part) {
-  responseContainer.insertAdjacentHTML('beforeend', alert(`Wow! There was an error making a request for the ${part}`));
+// error function for foursquare api
+function requestError(part) {
+  responseContainer.insertAdjacentHTML(alert(`Wow! There was an error making a request for one ${part}`));
 }
+
+// handle error message for google maps api
+function googleMapsError() {
+  alert('There was an error with Google Maps.');
+};
 
 //knockout view
 var AppViewModel = function() {
