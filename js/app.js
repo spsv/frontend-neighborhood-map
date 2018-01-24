@@ -121,7 +121,7 @@ var AppViewModel = function() {
 
   map = new google.maps.Map(document.getElementById('mapRJ'), {
     center: { lat: -22.9646877, lng: -43.2027327 },
-    zoom: 14
+    zoom: 13
   });
   //assign init restaurants info to Restaurant
   initRestaurants.forEach(function(info) {
